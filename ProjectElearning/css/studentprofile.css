@@ -1,0 +1,80 @@
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f98328;
+  z-index: 10;
+  padding: 10px 20px;
+}
+.nav-link {
+  color: #ffffff !important;
+}
+img {
+  height: 50px;
+  border-radius: 35px;
+}
+
+
+
+
+
+.container{
+    padding: 100px;
+    /* max-width: 1140px !important; */
+}
+.card-img-top{
+    height:300px;
+}
+.pro-img {
+    margin-top: -80px;
+    margin-bottom: 20px
+}
+.little-profile .pro-img img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%
+}
+
+
+.box1{
+    background-color: #f98328;
+    width: auto;
+    height: 120px;
+    border-radius: 10px;
+}
+
+
+
+
+
+.table-1{
+    margin-bottom: 100px;
+}
+p {
+  text-align: center;
+  background-color: #c5e4e0;
+}
+
+
+.box3{
+  height: 40px;
+  background-color: #ffa500;
+}
+.box3 .row .col span{
+  margin-left: 100px !important;
+}
+.container.box3 .col-4 .col{
+display: flex;
+  }
+.box4 {
+  height: 40px;
+  background-color: #d2f5f0;
+}
+.box4 .row .col span{
+  margin-left: 100px !important;
+}
+
+th {
+  border-radius: 10px;
+}

@@ -1,0 +1,58 @@
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f98328;
+  z-index: 10;
+  padding: 10px 20px;
+}
+.nav-link {
+  color: #ffffff !important;
+}
+img {
+  height: 50px;
+  border-radius: 35px;
+}
+
+
+
+.container{
+    margin-top: 180px;
+    width: 80%;
+    height: 600px;
+    background-color: #eceaea;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h2{
+    padding: 100px 0 35px 0;
+}
+
+.text1 {
+    display: flex;
+    margin-left: 250px;
+}
+.text1 h4{
+    padding-left: 220px;
+}
+.text2 {
+    display: flex;
+    margin-left: 250px;
+}
+.text2 h4{
+    padding-left: 220px;
+}
+.button{
+    margin-top: 50px;
+}
+.btn-outline-warning{
+    color: rgb(0, 0, 0) !important;
+    width: 150px !important;
+}
+.btn-warning{
+    color: #ffffff !important;
+    background-color: #f98328 !important;
+    width: 150px !important; /* Chiều rộng */
+}
