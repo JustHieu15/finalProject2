@@ -63,7 +63,8 @@ const confirmButton = document.getElementById('confirm-button');
 
 confirmButton.addEventListener('click', () => {
     // Get the value entered by the user
-    console.log("button clicked")
+    event.preventDefault();
+    console.log("button clicked");
     const stageCount = parseInt(stageInput.value);
 
     // Generate new stage details divs based on the entered stage count

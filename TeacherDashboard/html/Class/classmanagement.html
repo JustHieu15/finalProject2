@@ -11,8 +11,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    <link href="/src/output.css" rel="stylesheet">
-   <link rel="stylesheet" href="/css/classmanagement.css">
-   <script src="/js/classmanagement.js" defer></script>
+   <link rel="stylesheet" href="/css/Class/classmanagement.css">
+   <script src="/js/Class/classmanagement.js" defer></script>
    <title>Class Management</title>
 </head>
 
@@ -62,7 +62,7 @@
 
          <ul class="space-y-2 font-medium">
             <li>
-               <a href="maindashboard.html " class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
+               <a href="/html/Dashboard/maindashboard.html " class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
                   <svg class="w-5 h-5 text-white transition duration-75group-hover:text-white" aria-hidden="true"
                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                      <path
@@ -96,12 +96,12 @@
                   <a href="class.html" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
+                  <a href="/html/Course/course.html" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
                </li>
             </ul>
             </li>
             <li>
-               <a href="test.html" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+               <a href="/html/Test/test.html" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                      <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
@@ -111,7 +111,7 @@
                </a>
             </li>
             <li>
-               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+               <a href="/html/Blog/blog.html" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                      <circle cx="12" cy="12" r="4"></circle>
@@ -238,9 +238,14 @@
             <p class="font-semibold">School year:
                <span class="uppercase font-normal">2024</span>
             </p>
-            <p class="font-semibold">Class's ID:
-               <span class="uppercase font-normal">classno1</span>
+            <p class="font-semibold">Students amount:
+               <span class="font-normal">50</span>
             </p>
+            <div class="flex space-x-4 justify-end w-full mt-3">
+            <a href="classedit.html">
+               <button type="button" class="w-40 text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center block items-center">Change</button>
+            </a>
+            </div>
          </div>
       </div>
 
@@ -248,10 +253,10 @@
       <div class="p-2">
          <div class="flex w-full h-auto justify-between items-center rounded-lg p-4 bg-gray-700">
             <h2 class="text-white text-base font-semibold">Create a new course</h2>
-            <a href="createclass.html">
-               <button type="button" class=" text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+            <a href="/html/Course/coursecreate.html">
+               <button type="button" class="w-40 text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 justify-center inline-flex items-center">
                   <h3>Create&#160&#160</h3>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="14" width="12.25" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12.25" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
                   </button>
             </a>
          </div>
@@ -299,7 +304,7 @@
                            (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                           <a href="/html/Course/courseedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-700 even:bg-gray-400">
@@ -316,7 +321,7 @@
                            (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                           <a href="/html/Course/courseedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
@@ -333,7 +338,7 @@
                            (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                           <a href="/html/Course/courseedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>      
                      </tr>
                </tbody>
