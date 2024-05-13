@@ -14,9 +14,9 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    <link href="/src/output.css" rel="stylesheet">
-   <link rel="stylesheet" href="/css/Class/createclass.css">
-   <script src="/js/Class/createclass.js" defer></script>
-   <title>Create a new class</title>
+   <link rel="stylesheet" href="/css/Blog/blogedit.css">
+   <script src="/js/Blog//blogedit.js" defer></script>
+   <title>Edit Blog</title>
 </head>
 
 <body class="bg-gray-900">
@@ -236,13 +236,12 @@
 
    <!-- Main Content -->
    <div class="p-4 sm:ml-auto mr-auto max-w-4xl">
-      <!--Class Session -->
       <div class="p-2">
-         <div class="flex flex-col w-full h-auto items-center rounded-lg p-4 bg-gray-700">
-            <h1 class="text-white text-xl font-bold">Create your new class</h1>
+         <div class="flex flex-col w-full h-auto items-center p-4 rounded-lg bg-gray-700">
+            <h1 class="text-white text-2xl font-bold">Edit your blog</h1>
             <div class="flex w-full justify-between items-center mt-5">
-               <!-- Class ID -->
-               <h2 class="text-white text-base font-semibold">Your class's ID (Auto generated)</h2>
+               <!-- Test ID -->
+               <h2 class="text-white text-base font-semibold">Your blog's ID (Auto generated)</h2>
                <div class="w-full max-w-[16rem]">
                   <div class="relative">
                      <label for="npm-install-copy-button" class="sr-only">Label</label>
@@ -276,47 +275,92 @@
                   </div>
                </div>
             </div>
-            <!-- Insert Class's name -->
-            <div class="flex w-full justify-between items-center mt-3">
-               <h2 class="text-white text-base font-semibold">Insert your class's name</h2>
-               <form>
-                  <div class="w-full max-w-[16rem]">
-                     <div class="relative w-64">
-                        <input type="text" id="class_name"
-                           class="col-span-6 bg-gray-700 border text-white text-sm rounded-lg block w-full p-2.5"
-                           placeholder="Ex: 10A1 Math" required />
-                     </div>
+         </div>
+         <div class="bg-gray-700 p-4 -mt-3 rounded-b-lg mb-4">
+            <form>
+               <div class="grid gap-6 mb-6 md:grid-cols-2">
+                  <div>
+                     <label for="title" class="block mb-2 text-white text-base font-semibold">Change Blog's
+                        title</label>
+                     <input type="text" id="first_name"
+                        class="bg-gray-700 border text-white text-sm rounded-lg outline-none block w-full p-2.5 "
+                        placeholder="Ex: Final exam 1" required />
                   </div>
-               </form>
-            </div>
-            <!-- Insert Class's Subject -->
-            <div class="flex w-full justify-between items-center mt-3 ">
-               <h2 class="text-white text-base font-semibold">Choose your Class's subject</h2>
-               <div class="w-full max-w-[16rem]">
-                  <div class="relative">
-                     <form class="max-w-lg mx-auto">
-                        <select id="countries"
-                           class="bg-gray-700 border text-white text-sm rounded-lg block w-full p-2.5">
-                           <option selected disabled>Choose a subject</option>
-                           <option value="ma">Math</option>
-                           <option value="li">Literature</option>
-                           <option value="en">English</option>
-                           <option value="ph">Physics</option>
-                           <option value="ch">Chemistry</option>
-                           <option value="bi">Biology</option>
-                           <option value="cie">Civic Education</option>
-                           <option value="in">Informatics</option>
-                           <option value="geo">Geography</option>
-                           <option value="his">History</option>
-                           <option value="mu">Music</option>
-                        </select>
-                     </form>
+                  <div>
+                     <label for="duration" class="block mb-2 text-white text-base font-semibold">Subject</label>
+                     <select id="subject" class="bg-gray-700 border text-white text-sm rounded-lg block w-full p-2.5">
+                        <option selected disabled>Choose a subject</option>
+                        <option value="ma">Math</option>
+                        <option value="li">Literature</option>
+                        <option value="en">English</option>
+                        <option value="ph">Physics</option>
+                        <option value="ch">Chemistry</option>
+                        <option value="bi">Biology</option>
+                        <option value="cie">Civic Education</option>
+                        <option value="in">Informatics</option>
+                        <option value="geo">Geography</option>
+                        <option value="his">History</option>
+                        <option value="mu">Music</option>
+                     </select>
                   </div>
                </div>
-            </div>
+               <div class="mb-6">
+                  <label for="testDesc" class="block mb-2 text-white text-base font-semibold">Edit your blog</label>
+                  <div class="inline-flex rounded-md shadow-sm" role="group">
+                     <button type="button" class="inline-flex items-center px-2 py-2 text-sm font-medium text-white"
+                        onclick="makeBold()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" width="10.5" viewBox="0 0 384 512">
+                           <path fill="#ffffff"
+                              d="M0 64C0 46.3 14.3 32 32 32H80 96 224c70.7 0 128 57.3 128 128c0 31.3-11.3 60.1-30 82.3c37.1 22.4 62 63.1 62 109.7c0 70.7-57.3 128-128 128H96 80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V256 96H32C14.3 96 0 81.7 0 64zM224 224c35.3 0 64-28.7 64-64s-28.7-64-64-64H112V224H224zM112 288V416H256c35.3 0 64-28.7 64-64s-28.7-64-64-64H224 112z" />
+                        </svg>
+                     </button>
+                     <button type="button" class="inline-flex items-center px-2 py-2 text-sm font-medium text-white"
+                        onclick="makeItalic()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" width="10.5" viewBox="0 0 384 512">
+                           <path fill="#ffffff"
+                              d="M128 64c0-17.7 14.3-32 32-32H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H293.3L160 416h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H90.7L224 96H160c-17.7 0-32-14.3-32-32z" />
+                        </svg>
+                     </button>
+                     <button type="button" class="inline-flex items-center px-2 py-2 text-sm font-medium text-white"
+                        onclick="makeUnderline()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="14" viewBox="0 0 448 512">
+                           <path fill="#ffffff"
+                              d="M16 64c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H128V224c0 53 43 96 96 96s96-43 96-96V96H304c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H384V224c0 88.4-71.6 160-160 160s-160-71.6-160-160V96H48C30.3 96 16 81.7 16 64zM0 448c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32z" />
+                        </svg>
+                     </button>
+                     <button type="button" class="inline-flex items-center px-2 py-2 text-sm font-medium text-white"
+                        onclick="toggleDiv()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="16" viewBox="0 0 512 512">
+                           <path fill="#ffffff"
+                              d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                        </svg>
+                     </button>
+                  </div>
+                  <div id="dropzone-container" class="hidden my-2">
+                     <div class="flex items-center justify-center w-full">
+                        <label for="dropzone-file"
+                           class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-500">
+                           <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                              <svg xmlns="http://www.w3.org/2000/svg" height="25" width="30" viewBox="0 0 640 512">
+                                 <path fill="#ffffff"
+                                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z" />
+                              </svg>
+                              <p class="my-2 text-sm text-white dark:text-gray-400"><span class="font-semibold">Click to
+                                    upload</span> or drag and drop</p>
+                              <p class="text-xs text-white dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                           </div>
+                           <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                     </div>
+                  </div>
+                  <textarea id="blog" rows="4"
+                     class="bg-gray-700 border text-white text-base rounded-lg outline-none block w-full min-h-96 p-2.5"
+                     placeholder="What are you thinking?..."></textarea>
+               </div>
+            </form>
             <div class="flex space-x-4 justify-end w-full mt-3">
                <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button"
-                  class="text-white bg-transparent border border-gray-500 hover:bg-red-500 font-medium rounded-lg text-lg px-12 py-1.5 mb-2">Cancel</button>
+                  class="text-white bg-transparent border border-gray-500 hover:bg-red-500 font-medium rounded-lg text-lg px-12 py-1.5 mb-2">Delete</button>
                <div id="popup-modal" tabindex="-1"
                   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                   <div class="relative p-4 w-full max-w-md max-h-full">
@@ -338,7 +382,7 @@
                                  stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                            </svg>
                            <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want
-                              to cancel creating new course?</h3>
+                              to delete this course?</h3>
                            <button data-modal-hide="popup-modal" type="button"
                               class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
                               Yes, I'm sure
@@ -350,12 +394,43 @@
                      </div>
                   </div>
                </div>
-               <button type="button"
-                  class="text-white bg-orange-500 hover:bg-yellow-500 font-medium rounded-lg text-lg px-12 py-1.5 mb-2">Create</button>
+               <button data-modal-target="popup-modal-1" data-modal-toggle="popup-modal-1" type="button"
+                  class="text-white bg-orange-500 hover:bg-yellow-500 font-medium rounded-lg text-lg px-12 py-1.5 mb-2">Save</button>
+               <div id="popup-modal-1" tabindex="-1"
+                  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                  <div class="relative p-4 w-full max-w-md max-h-full">
+                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <button type="button"
+                           class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                           data-modal-hide="popup-modal-1">
+                           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                           </svg>
+                           <span class="sr-only">Close modal</span>
+                        </button>
+                        <div class="p-4 md:p-5 text-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-4 w-14 h-14" viewBox="0 0 512 512">
+                              <path fill="#63E6BE"
+                                 d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
+                           </svg>
+                           <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want
+                              to save these changes?</h3>
+                           <button data-modal-hide="popup-modal-1" type="button"
+                              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">No,
+                              cancel</button>
+                           <button data-modal-hide="popup-modal-1" type="button"
+                              class="text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                              Yes, I'm sure
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
-   </div>
 </body>
 
 </html>

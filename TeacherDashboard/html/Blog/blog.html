@@ -14,9 +14,9 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    <link href="/src/output.css" rel="stylesheet">
-   <link rel="stylesheet" href="/css/test.css">
-   <script src="/js/test.js" defer></script>
-   <title>Test</title>
+   <link rel="stylesheet" href="/css/Blog/blog.css">
+   <script src="/js/Blog/blog.js" defer></script>
+   <title>Blog</title>
 </head>
 
 <body class="bg-gray-900">
@@ -39,8 +39,6 @@
          <a href="#" class="flex items-center ps-2.5 mb-5">
             <img src="/img/LogoEduZone..png" class="h-14 me- sm:h-12 " alt="FPT EduZone Logo" />
          </a>
-
-
          <!-- This will be visible only in responsive mode -->
          <button type="button" class="sm:hidden flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500"
             aria-controls="dropdown-avatar" data-collapse-toggle="dropdown-avatar">
@@ -64,11 +62,10 @@
                <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Settings</a>
             </li>
          </ul>
-
-
          <ul class="space-y-2 font-medium">
             <li>
-               <a href="maindashboard.html " class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
+               <a href="/html/Dashboard/maindashboard.html "
+                  class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
                   <svg class="w-5 h-5 text-white transition duration-75group-hover:text-white" aria-hidden="true"
                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                      <path
@@ -99,34 +96,50 @@
                </button>
                <ul id="dropdown-example" class="hidden py-2 space-y-2">
                   <li>
-                     <a href="#"
+                     <a href="/html/Class/class.html"
                         class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
                   </li>
                   <li>
-                     <a href="#"
+                     <a href="/html/Course/course.html"
                         class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
                   </li>
                </ul>
             </li>
             <li>
-               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+               <button type="button"
+                  class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500"
+                  aria-controls="dropdown-test" data-collapse-toggle="dropdown-test">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                      <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
                      <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
                   </svg>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Test</span>
-               </a>
-            </li>
-            <li>
-               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
-                     stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                     <circle cx="12" cy="12" r="4"></circle>
-                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Test</span>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
                   </svg>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Blog</span>
-               </a>
+               </button>
+               <ul id="dropdown-test" class="hidden py-2 space-y-2">
+                  <li>
+                     <a href="/html/Test/test.html"
+                        class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Your test</a>
+                  </li>
+                  <li>
+                     <a href="/html/Test/questionbank.html"
+                        class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Question bank</a>
+                  </li>
+               </ul>
+            </li>
+            <a href="/html/Blog/blog.html" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+                  stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+               </svg>
+               <span class="flex-1 ms-3 whitespace-nowrap">Blog</span>
+            </a>
             </li>
             <li>
                <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
@@ -226,8 +239,8 @@
       <!-- Create Class button -->
       <div class="p-2">
          <div class="flex w-full h-auto justify-between items-center rounded-lg p-4 bg-gray-700">
-            <h2 class="text-white text-base font-semibold">Create a new Test</h2>
-            <a href="createclass.html">
+            <h2 class="text-white text-base font-semibold">Create a new blog</h2>
+            <a href="/html/Blog/blogcreate.html">
                <button type="button"
                   class=" text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
                   <h3>Create&#160&#160</h3>
@@ -240,37 +253,9 @@
          </div>
       </div>
 
-      <!--Test Session -->
-      <div class="p-2">
-         <div class="flex w-full h-auto justify-between items-center rounded-lg p-4 bg-gray-700">
-            <h2 class="text-white text-base font-semibold">Choose test session</h2>
-            <div>
-               <form class="max-w-xl mx-auto">
-                  <div class="flex flex-row text-white">
-                     <!-- Choose semester -->
-                     <label for="semester" class="sr-only">Choose semester</label>
-                     <select id="semester"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option selected disabled>Choose semester</option>
-                        <option value="1">Semester I</option>
-                        <option value="2">Semester II</option>
-                     </select>
-                     <!-- Choose year -->
-                     <label for="year" class="sr-only">Choose year</label>
-                     <select id="year"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option selected disabled>Choose year</option>
-                     </select>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-
-      <!-- Classes list table -->
+      <!-- Blogs list table -->
       <div class="p-2">
          <div class="realative overflow-x-auto mb-4  rounded-lg bg-gray-700">
-
             <div class="mt-4">
                <form class="max-w-md mx-auto">
                   <label for="default-search"
@@ -285,7 +270,7 @@
                      </div>
                      <input type="search" id="default-search"
                         class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 f"
-                        placeholder="Search with Test's, Course's ID" required />
+                        placeholder="Search with Title, Blog's ID" required />
                      <button type="submit"
                         class="text-white absolute end-2.5 bottom-2.5 bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
                   </div>
@@ -294,21 +279,21 @@
 
             <table class="w-full text-sm text-left rtl:text-right text-white">
                <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-50 bg-gray-700 ">
-                  Your tests list
-                  <p class="mt-1 text-sm font-normal text-gray-300 ">The 'Test List' displays all assessments within
-                     your courses. Quickly access test details and student performance to streamline grading and monitor
-                     progress.</p>
+                  Your blogs list
+                  <p class="mt-1 text-sm font-normal text-gray-300 ">Organized collection of blogs, facilitating easy
+                     navigation and access to diverse content. Allows for efficient management and tracking of blog
+                     posts for publishing and analysis.</p>
                </caption>
                <thead class="text-xs text-white uppercase bg-gray-500 ">
                   <tr>
                      <th scope="col" class="px-6 py-4">
-                        test ID
+                        title
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
-                        course id
+                        Blog's id
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
-                        Questions amount
+                        Views
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
                         Date created
@@ -320,11 +305,11 @@
                </thead>
                <tbody>
                   <tr class="odd:bg-gray-700 even:bg-gray-400">
-                     <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap uppercase">
-                        testno1
+                     <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap">
+                        How to do math
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                        courseno1
+                        blogno1
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
@@ -333,15 +318,15 @@
                         (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="/html/Blog/blogedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-700 even:bg-gray-400">
-                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                        testno2
+                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
+                        How can Earth keep spining
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                        courseno2
+                        blogno2
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
@@ -350,15 +335,15 @@
                         (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="/html/Blog/blogedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
-                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                        testno3
+                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                        Why is math difficult?
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                        courseno3
+                        blogno3
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
@@ -367,15 +352,15 @@
                         (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="/html/Blog/blogedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
-                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                        testno4
+                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                        Why 1+1 = 2?
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                        courseno4
+                        blogno4
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
@@ -384,15 +369,15 @@
                         (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="/html/Blog/blogedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
-                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                        testno5
+                     <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                        Why couldn't America, China, France win against Vietnam?
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                        courseno5
+                        blogno5
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
@@ -401,7 +386,7 @@
                         (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="/html/Blog/blogedit.html" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                </tbody>
