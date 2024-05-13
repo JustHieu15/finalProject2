@@ -6,9 +6,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    <link href="/src/output.css" rel="stylesheet">
    <link rel="stylesheet" href="/css/test.css">
@@ -18,34 +21,37 @@
 
 <body class="bg-gray-900">
    <!-- Sidebar Menu Left -->
-         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-            type="button"
-            class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-            <span class="sr-only">Open left sidebar</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg">
-               <path clip-rule="evenodd" fill-rule="evenodd"
-                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-               </path>
-            </svg>
-         </button>
-         <aside id="logo-sidebar"
+   <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <span class="sr-only">Open left sidebar</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+         xmlns="http://www.w3.org/2000/svg">
+         <path clip-rule="evenodd" fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+         </path>
+      </svg>
+   </button>
+   <aside id="logo-sidebar"
       class="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0"
       aria-label="Sidebar">
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-700 ">
          <a href="#" class="flex items-center ps-2.5 mb-5">
             <img src="/img/LogoEduZone..png" class="h-14 me- sm:h-12 " alt="FPT EduZone Logo" />
          </a>
-         
+
 
          <!-- This will be visible only in responsive mode -->
-         <button type="button"
-            class="sm:hidden flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500"
+         <button type="button" class="sm:hidden flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500"
             aria-controls="dropdown-avatar" data-collapse-toggle="dropdown-avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+               stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
+               <circle cx="12" cy="10" r="3" />
+               <circle cx="12" cy="12" r="10" />
+            </svg>
             <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Teacher's name</span>
-            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-               viewBox="0 0 10 6">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="m1 1 4 4 4-4" />
             </svg>
@@ -74,31 +80,33 @@
                </a>
             </li>
             <li>
-            <button type="button"
-               class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500"
-               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
-                  stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-               </svg>
-               <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Semester</span>
-               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     d="m1 1 4 4 4-4" />
-               </svg>
-            </button>
-            <ul id="dropdown-example" class="hidden py-2 space-y-2">
-               <li>
-                  <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
-               </li>
-               <li>
-                  <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
-               </li>
-            </ul>
+               <button type="button"
+                  class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500"
+                  aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+                     stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                     <line x1="16" y1="2" x2="16" y2="6"></line>
+                     <line x1="8" y1="2" x2="8" y2="6"></line>
+                     <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Semester</span>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                  </svg>
+               </button>
+               <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                     <a href="#"
+                        class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
+                  </li>
+                  <li>
+                     <a href="#"
+                        class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
+                  </li>
+               </ul>
             </li>
             <li>
                <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
@@ -132,18 +140,23 @@
    </aside>
 
    <!-- Menu Sidebar Right -->
-   <aside id="notification-sidebar"  
-   class="fixed top-0 right-0 z-40 w-72 h-screen transition-transform translate-x-full sm:translate-x-0 bg-gray-700 "
-   aria-label="notification-sidebar">
+   <aside id="notification-sidebar"
+      class="fixed top-0 right-0 z-40 w-72 h-screen transition-transform translate-x-full sm:translate-x-0 bg-gray-700 "
+      aria-label="notification-sidebar">
       <div class="h-full px-3 py-4 overflow-hidden">
-         <button type="button" class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500" 
-            aria-controls="dropdown-avatar-right" 
-            data-collapse-toggle="dropdown-avatar-right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
-               <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Teacher's name</span>
-               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-               </svg>
+         <button type="button" class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500"
+            aria-controls="dropdown-avatar-right" data-collapse-toggle="dropdown-avatar-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+               stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
+               <circle cx="12" cy="10" r="3" />
+               <circle cx="12" cy="12" r="10" />
+            </svg>
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Teacher's name</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+            </svg>
          </button>
          <ul id="dropdown-avatar-right" class="hidden py-2 space-y-2">
             <li>
@@ -153,34 +166,37 @@
                <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Settings</a>
             </li>
          </ul>
-      <hr class="border-t border-white my-4">
+         <hr class="border-t border-white my-4">
          <div class="relative max-w-sm my-5">
             <div class="wrapper">
                <header>
-               <p class="current-date"></p>
-               <div class="icons">
-                  <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                  <span id="next" class="material-symbols-rounded">chevron_right</span>
-               </div>
+                  <p class="current-date"></p>
+                  <div class="icons">
+                     <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                     <span id="next" class="material-symbols-rounded">chevron_right</span>
+                  </div>
                </header>
                <div class="calendar">
-               <ul class="weeks">
-                  <li>Sun</li>
-                  <li>Mon</li>
-                  <li>Tue</li>
-                  <li>Wed</li>
-                  <li>Thu</li>
-                  <li>Fri</li>
-                  <li>Sat</li>
-               </ul>
-               <ul class="days"></ul>
+                  <ul class="weeks">
+                     <li>Sun</li>
+                     <li>Mon</li>
+                     <li>Tue</li>
+                     <li>Wed</li>
+                     <li>Thu</li>
+                     <li>Fri</li>
+                     <li>Sat</li>
+                  </ul>
+                  <ul class="days"></ul>
                </div>
             </div>
          </div>
 
          <a href="#">
             <div class="flex items-center gap-3 mb-3">
-               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
+               </svg>
                <h2 class="text-white">Notifications</h2>
             </div>
          </a>
@@ -190,11 +206,11 @@
             <!-- Notification Content -->
             <p class="text-xs text-gray-300">Lorem ipsum dolor sit amet, consectetur ....</p>
          </div>
-      <div class="bg-gray-500 shadow-lg rounded-lg p-4 mb-2">
-         <!-- Notification Title -->
-         <h3 class="text-white text-base font-semibold mb-2">Notification Title</h3>
-         <!-- Notification Content -->
-         <p class="text-xs text-gray-300">Lorem ipsum dolor sit amet, consectetur ....</p>
+         <div class="bg-gray-500 shadow-lg rounded-lg p-4 mb-2">
+            <!-- Notification Title -->
+            <h3 class="text-white text-base font-semibold mb-2">Notification Title</h3>
+            <!-- Notification Content -->
+            <p class="text-xs text-gray-300">Lorem ipsum dolor sit amet, consectetur ....</p>
          </div>
          <div class="bg-gray-500 shadow-lg rounded-lg p-4 mb-2">
             <!-- Notification Title -->
@@ -205,17 +221,21 @@
       </div>
    </aside>
 
-<!-- Main Content -->
+   <!-- Main Content -->
    <div class="p-4 sm:ml-auto mr-auto max-w-4xl">
       <!-- Create Class button -->
       <div class="p-2">
          <div class="flex w-full h-auto justify-between items-center rounded-lg p-4 bg-gray-700">
             <h2 class="text-white text-base font-semibold">Create a new Test</h2>
             <a href="createclass.html">
-               <button type="button" class=" text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+               <button type="button"
+                  class=" text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
                   <h3>Create&#160&#160</h3>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="14" width="12.25" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
-                  </button>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="14" width="12.25" viewBox="0 0 448 512">
+                     <path fill="#ffffff"
+                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                  </svg>
+               </button>
             </a>
          </div>
       </div>
@@ -229,14 +249,16 @@
                   <div class="flex flex-row text-white">
                      <!-- Choose semester -->
                      <label for="semester" class="sr-only">Choose semester</label>
-                     <select id="semester" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                     <select id="semester"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected disabled>Choose semester</option>
                         <option value="1">Semester I</option>
                         <option value="2">Semester II</option>
                      </select>
                      <!-- Choose year -->
                      <label for="year" class="sr-only">Choose year</label>
-                     <select id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                     <select id="year"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected disabled>Choose year</option>
                      </select>
                   </div>
@@ -244,47 +266,55 @@
             </div>
          </div>
       </div>
-   
+
       <!-- Classes list table -->
       <div class="p-2">
          <div class="realative overflow-x-auto mb-4  rounded-lg bg-gray-700">
-            
-         <div class="mt-4">
-            <form class="max-w-md mx-auto">   
-               <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-               <div class="relative">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                     </svg>
+
+            <div class="mt-4">
+               <form class="max-w-md mx-auto">
+                  <label for="default-search"
+                     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                  <div class="relative">
+                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                     </div>
+                     <input type="search" id="default-search"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 f"
+                        placeholder="Search with Test's, Course's ID" required />
+                     <button type="submit"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
                   </div>
-                  <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 f" placeholder="Search with Test's, Course's ID" required />
-                  <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
-               </div>
-            </form>
-         </div>
+               </form>
+            </div>
 
             <table class="w-full text-sm text-left rtl:text-right text-white">
                <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-50 bg-gray-700 ">
                   Your tests list
-                  <p class="mt-1 text-sm font-normal text-gray-300 ">The 'Test List' displays all assessments within your courses. Quickly access test details and student performance to streamline grading and monitor progress.</p>
+                  <p class="mt-1 text-sm font-normal text-gray-300 ">The 'Test List' displays all assessments within
+                     your courses. Quickly access test details and student performance to streamline grading and monitor
+                     progress.</p>
                </caption>
                <thead class="text-xs text-white uppercase bg-gray-500 ">
                   <tr>
                      <th scope="col" class="px-6 py-4">
-                           test ID
+                        test ID
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
-                           course id
+                        course id
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
-                           Questions amount
+                        Questions amount
                      </th>
                      <th scope="col" class="px-6 py-4 text-center">
-                           Date created
+                        Date created
                      </th>
                      <th scope="col" class="pl-8 py-4">
-                           <a href="#" class="hover:underline hover:text-blue-500"></a>
+                        <a href="#" class="hover:underline hover:text-blue-500"></a>
                      </th>
                   </tr>
                </thead>
@@ -300,85 +330,86 @@
                         50
                      </td>
                      <td class="px-6 py-4 text-center">
-                           (dd/mm/yyyy)
+                        (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-700 even:bg-gray-400">
                      <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                           testno2
+                        testno2
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                           courseno2
+                        courseno2
                      </td>
                      <td class="px-6 py-4 text-center">
                         50
                      </td>
                      <td class="px-6 py-4 text-center">
-                           (dd/mm/yyyy)
+                        (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
                      <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                           testno3
+                        testno3
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                           courseno3
+                        courseno3
                      </td>
                      <td class="px-6 py-4 text-center">
-                           50
+                        50
                      </td>
                      <td class="px-6 py-4 text-center">
-                           (dd/mm/yyyy)
+                        (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
                      <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                           testno4
+                        testno4
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                           courseno4
+                        courseno4
                      </td>
                      <td class="px-6 py-4 text-center">
-                           50
+                        50
                      </td>
                      <td class="px-6 py-4 text-center">
-                           (dd/mm/yyyy)
+                        (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                   <tr class="odd:bg-gray-900 even:bg-gray-400">
                      <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap uppercase">
-                           testno5
+                        testno5
                      </th>
                      <td class="px-6 py-4 text-center uppercase">
-                           courseno5
+                        courseno5
                      </td>
                      <td class="px-6 py-4 text-center">
-                           50
+                        50
                      </td>
                      <td class="px-6 py-4 text-center">
-                           (dd/mm/yyyy)
+                        (dd/mm/yyyy)
                      </td>
                      <td class="px-6 py-4 text-center">
-                           <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                        <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
                      </td>
                   </tr>
                </tbody>
-         </table>
+            </table>
          </div>
       </div>
    </div>
 
 </body>
+
 </html>

@@ -92,11 +92,23 @@ header .current-date{
   background: #f2f2f2a1;
 }
 
-.toolbar {
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s;
+.content {
+  display: inline-block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+}
+
+#toolbar1 {
+    right: -40px;
+    position: absolute;
+    background-color: gray;
+    transition: top 0.5s;
 }
 
 .toolbar-item {
@@ -117,6 +129,5 @@ header .current-date{
 .toolbar-item:hover {
   background-color: #555;
 }
-
 
 
