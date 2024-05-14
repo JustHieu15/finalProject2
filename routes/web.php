@@ -45,6 +45,18 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [AdminCourseController::class, 'index'])->name('admin.course.index');
     });
 
+    Route::prefix('test')->group(function () {
+       Route::get('/create', [AdminTestController::class, 'create'])->name('admin.test.create');
+       Route::post('/store', [AdminTestController::class, 'create'])->name('admin.test.create');
+
+       Route::get('/edit/{id?}' , [AdminTestController::class, 'edit'])->name('admin.test.edit');
+       Route::patch('/update', [AdminTestController::class, 'update'])->name('admin.test.update');
+
+       Route::delete('/delete', [AdminTestController::class, 'destroy'])->name('admin.test.delete');
+
+       Route::get('/', [AdminTestController::class, 'index'])->name('admin.test.index');
+    });
+
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 });
 

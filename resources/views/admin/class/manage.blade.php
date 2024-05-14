@@ -36,18 +36,28 @@
                 <p class="font-semibold">Name:
                     <span class="font-normal">{{ $class->name }}</span>
                 </p>
+{{--                <label class="font-semibold">Name</label>--}}
+{{--                <input type="text"--}}
+{{--                       class="col-span-6 bg-gray-700 border text-white text-sm rounded-lg outline-none block w-full p-2.5 "--}}
+{{--                       value={{ $class->name }}>--}}
                 <p class="font-semibold">Class's ID:
                     <span class="uppercase font-normal">class {{ $class->id }}</span>
                 </p>
                 <p class="font-semibold">Semester:
                     <span class="font-normal">{{ $class->semester_name }}</span>
                 </p>
-                <p class="font-semibold">School year:
-                    <span class="uppercase font-normal">
+{{--                <p class="font-semibold">School year:--}}
+{{--                    <span class="uppercase font-normal">--}}
 {{--                        {{ $schoolYear->start_year }} - {{ $schoolYear->end_year }}--}}
-                        {{ $class->semester_year }}
-                    </span>
-                </p>
+{{--                        {{ $class->semester_year }}--}}
+{{--                    </span>--}}
+{{--                </p>--}}
+                <div class="flex space-x-4 justify-end w-full mt-3">
+                    <a href="">
+                        <button type="button"
+                                class="w-40 text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center block items-center">Change</button>
+                    </a>
+                </div>
             </div>
         </div>
 

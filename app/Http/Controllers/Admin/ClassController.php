@@ -64,27 +64,27 @@ class ClassController extends Controller
         return view('admin.class.manage', compact('class', 'courses'));
     }
 
-//    public function update(Request $request)
-//    {
-//        $id = session()->has('class_id') ? session('class_id') : null;
-//
-//        if (!$id) {
-//            return redirect()->route('admin.class')->with('error', 'Class not found');
-//        }
-//
-//        $data = $request->all();
-//
-//        return redirect()->route('admin.class')->with('success', 'Class updated successfully');
-//    }
-//
-//    public function destroy(Request $request)
-//    {
-//        $id = $request->id;
-//
-//        if (!$id) {
-//            return redirect()->route('admin.class')->with('error', 'Class not found');
-//        }
-//
-//        return redirect()->route('admin.class')->with('success', 'Class deleted successfully');
-//    }
+    public function update(Request $request)
+    {
+        $id = session()->has('class_id') ? session('class_id') : null;
+
+        if (!$id) {
+            return redirect()->route('admin.class')->with('error', 'Class not found');
+        }
+
+        $data = $request->all();
+
+        return redirect()->route('admin.class')->with('success', 'Class updated successfully');
+    }
+
+    public function destroy(Request $request)
+    {
+        $id = $request->id;
+
+        if (!$id) {
+            return redirect()->route('admin.class')->with('error', 'Class not found');
+        }
+
+        return redirect()->route('admin.class')->with('success', 'Class deleted successfully');
+    }
 }

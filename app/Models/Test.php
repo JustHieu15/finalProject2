@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Test extends Model
 {
     use HasFactory;
+
+    protected  $table = 'test';
+
+    protected $fillable = [
+        'name',
+        'description',
+        'time_limit',
+        'question_limit'
+    ];
+
+    public $timestamps = false;
 }
