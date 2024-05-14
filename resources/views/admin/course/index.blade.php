@@ -19,14 +19,19 @@
                             <select id="semester"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected disabled>Choose semester</option>
-                                <option value="1">Semester I</option>
-                                <option value="2">Semester II</option>
+                                @foreach($semesters as $semester)
+                                    <option value="{{ $semester->id }}">{{ $semester->name }}</option>
+                                @endforeach
                             </select>
+
                             <!-- Choose year -->
                             <label for="year" class="sr-only">Choose year</label>
                             <select id="year"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected disabled>Choose year</option>
+                                @foreach($semesters as $semester)
+                                    <option value="{{ $semester->id }}">{{ $semester->year }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </form>
@@ -70,10 +75,7 @@
                             course id
                         </th>
                         <th scope="col" class="px-6 py-4 text-center">
-                            class id
-                        </th>
-                        <th scope="col" class="px-6 py-4 text-center">
-                            Date created
+                            subjects
                         </th>
                         <th scope="col" class="pl-8 py-4">
                             <a href="{{ route('admin.course.edit', [1]) }}" class="hover:underline hover:text-blue-500"></a>
@@ -82,57 +84,22 @@
                     </thead>
 
                     <tbody>
-                    <tr class="odd:bg-gray-700 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
-                            Unit 1
-                        </th>
-                        <td class="px-6 py-4 text-center uppercase">
-                            COURSENO1
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            4
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="{{ route('admin.course.edit', [1]) }}" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr class="odd:bg-gray-700 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                            Unit 2
-                        </th>
-                        <td class="px-6 py-4 text-center uppercase">
-                            courseno2
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            3
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr class="odd:bg-gray-700 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                            Unit 3
-                        </th>
-                        <td class="px-6 py-4 text-center uppercase">
-                            courseno3
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            4
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="{{ route('admin.course.edit', [1]) }}" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
+                    @foreach ($courses as $course)
+                        <tr class="odd:bg-gray-700 even:bg-gray-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
+                                {{ $course->name }}
+                            </th>
+                            <td class="px-6 py-4 text-center uppercase">
+                                COURSE {{ $course->id }}
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                {{ $course->subject_name }}
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <a href="{{ route('admin.course.edit', $course->id) }}" class="font-medium text-orange-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -11,9 +11,10 @@ class Course extends Model
 
     protected $table = 'course';
 
-    protected $primaryKey = 'id';
-
-
+    protected $fillable = [
+        'name',
+        'subject_id'
+    ];
 
     public $timestamps = false;
 }
