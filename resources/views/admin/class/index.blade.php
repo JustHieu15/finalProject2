@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+    {{--    @error('class')--}}
+    {{--        <div class="alert alert-danger">{{ $message }}</div>--}}
+    {{--    @enderror--}}
+
+    {{--    @if (session('success'))--}}
+    {{--        <div class="alert alert-success">{{ session('success') }}</div>--}}
+    {{--    @endif--}}
+
     <!-- Main Content -->
     <div class="p-4 sm:ml-auto mr-auto max-w-4xl">
         <!--Class Session -->
@@ -19,14 +27,19 @@
                             <select id="semester"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected disabled>Choose semester</option>
-                                <option value="1">Semester I</option>
-                                <option value="2">Semester II</option>
+                                @foreach($semesters as $semester)
+                                    <option value="{{ $semester->id }}">{{ $semester->name }}</option>
+                                @endforeach
                             </select>
+
                             <!-- Choose year -->
                             <label for="year" class="sr-only">Choose year</label>
                             <select id="year"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected disabled>Choose year</option>
+                                @foreach($semesters as $semester)
+                                    <option value="{{ $semester->id }}">{{ $semester->year }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </form>
@@ -63,115 +76,40 @@
                     </caption>
 
                     <thead class="text-xs text-white uppercase bg-gray-500 ">
-                        <tr>
-                            <th scope="col" class="px-6 py-4">
-                                Class ID
-                            </th>
-                            <th scope="col" class="px-6 py-4 text-center">
-                                Subject
-                            </th>
-                            <th scope="col" class="px-6 py-4 text-center">
-                                Students amount
-                            </th>
-                            <th scope="col" class="px-6 py-4 text-center">
-                                Date created
-                            </th>
-                            <th scope="col" class="pl-8 py-4">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="hover:underline hover:text-blue-500"></a>
-                            </th>
-                        </tr>
+                    <tr>
+                        <th scope="col" class="px-6 py-4">
+                            Class ID
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-center">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-center">
+                            Students amount
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-center">
+                            Actions
+                        </th>
+                    </tr>
                     </thead>
 
                     <tbody>
+                    @foreach($classes as $class)
                         <tr class="odd:bg-gray-700 even:bg-gray-400">
                             <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
-                                CLASSNO1
+                                CLASS {{ $class->id }}
                             </th>
                             <td class="px-6 py-4 text-center">
-                                Math
+                                {{ $class->name }}
                             </td>
                             <td class="px-6 py-4 text-center">
-                                100
+                                {{ $class->number_student }}
                             </td>
                             <td class="px-6 py-4 text-center">
-                                (dd/mm/yyyy)
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="font-medium text-orange-500 hover:underline">Manage</a>
+                                <a href="{{ route('admin.class.manage', $class->id) }}"
+                                   class="font-medium text-orange-500 hover:underline">Manage</a>
                             </td>
                         </tr>
-
-                        <tr class="odd:bg-gray-700 even:bg-gray-400">
-                            <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                                CLASSNO2
-                            </th>
-                            <td class="px-6 py-4 text-center">
-                                English
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                150
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                (dd/mm/yyyy)
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="font-medium text-orange-500 hover:underline">Manage</a>
-                            </td>
-                        </tr>
-
-                        <tr class="odd:bg-gray-700 even:bg-gray-400">
-                            <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                                CLASSNO3
-                            </th>
-                            <td class="px-6 py-4 text-center">
-                                Biology
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                50
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                (dd/mm/yyyy)
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="font-medium text-orange-500 hover:underline">Manage</a>
-                            </td>
-                        </tr>
-
-                        <tr class="odd:bg-gray-700 even:bg-gray-400">
-                            <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                                CLASSNO4
-                            </th>
-                            <td class="px-6 py-4 text-center">
-                                Physics
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                50
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                (dd/mm/yyyy)
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="font-medium text-orange-500 hover:underline">Manage</a>
-                            </td>
-                        </tr>
-
-                        <tr class="odd:bg-gray-700 even:bg-gray-400">
-                            <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                                CLASSNO5
-                            </th>
-                            <td class="px-6 py-4 text-center">
-                                Informatics
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                50
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                (dd/mm/yyyy)
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.class.manage', [1]) }}" class="font-medium text-orange-500 hover:underline">Manage</a>
-                            </td>
-                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -83,11 +83,11 @@
 
                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                     <li>
-                        <a href="{{ route('admin.class') }}"
+                        <a href="{{ route('admin.class.index') }}"
                            class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.course') }}" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
+                        <a href="{{ route('admin.course.index') }}" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
                     </li>
                 </ul>
             </li>

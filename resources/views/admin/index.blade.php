@@ -65,13 +65,13 @@
                             Class ID
                         </th>
                         <th scope="col" class="px-6 py-4 text-center">
-                            Subject
+                            Name
                         </th>
                         <th scope="col" class="px-6 py-4 text-center">
                             Students amount
                         </th>
                         <th scope="col" class="px-6 py-4 text-center">
-                            Date created
+                            Semester
                         </th>
                         <th scope="col" class="pl-8 py-4">
                             <a href="class.html" class="hover:underline hover:text-blue-500">See all</a>
@@ -79,57 +79,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="odd:bg-gray-700 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
-                            CLASSNO1
-                        </th>
-                        <td class="px-6 py-4 text-center">
-                            Math
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            100
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr class="odd:bg-gray-700 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                            CLASSNO2
-                        </th>
-                        <td class="px-6 py-4 text-center">
-                            English
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            150
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr class="odd:bg-gray-900 even:bg-gray-400">
-                        <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap ">
-                            CLASSNO3
-                        </th>
-                        <td class="px-6 py-4 text-center">
-                            Biology
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            50
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            (dd/mm/yyyy)
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
+                    @foreach($classes as $class)
+                        <tr class="odd:bg-gray-700 even:bg-gray-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
+                                CLASS {{ $class->id }}
+                            </th>
+                            <td class="px-6 py-4 text-center">
+                                {{ $class->name }}
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                {{ $class->number_student }}
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                {{ $class->semester_year }}
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

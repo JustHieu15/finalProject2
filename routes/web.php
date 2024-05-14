@@ -19,10 +19,6 @@ use App\Http\Controllers\Admin\CourseController as AdminCourseController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 // Admin Routes
 Route::prefix('admin')->group(function () {
     Route::prefix('class')->group(function () {
@@ -30,11 +26,11 @@ Route::prefix('admin')->group(function () {
         Route::post('/store', [AdminClassController::class, 'store'])->name('admin.class.store');
 
         Route::get('/manage/{id?}' , [AdminClassController::class, 'manage'])->name('admin.class.manage');
-        Route::put('/update/{id}', [AdminClassController::class, 'update'])->name('admin.class.update');
+        Route::put('/update', [AdminClassController::class, 'update'])->name('admin.class.update');
 
-        Route::delete('/delete/{id}', [AdminClassController::class, 'destroy'])->name('admin.class.delete');
+        Route::delete('/delete', [AdminClassController::class, 'destroy'])->name('admin.class.delete');
 
-        Route::get('/', [AdminClassController::class, 'index'])->name('admin.class');
+        Route::get('/', [AdminClassController::class, 'index'])->name('admin.class.index');
     });
 
     Route::prefix('course')->group(function () {
@@ -42,11 +38,11 @@ Route::prefix('admin')->group(function () {
         Route::post('/store', [AdminCourseController::class, 'store'])->name('admin.course.store');
 
         Route::get('/edit/{id?}' , [AdminCourseController::class, 'edit'])->name('admin.course.edit');
-        Route::put('/update/{id}', [AdminCourseController::class, 'update'])->name('admin.course.update');
+        Route::patch('/update', [AdminCourseController::class, 'update'])->name('admin.course.update');
 
-        Route::delete('/delete/{id}', [AdminCourseController::class, 'destroy'])->name('admin.course.delete');
+        Route::delete('/delete', [AdminCourseController::class, 'destroy'])->name('admin.course.delete');
 
-        Route::get('/', [AdminCourseController::class, 'index'])->name('admin.course');
+        Route::get('/', [AdminCourseController::class, 'index'])->name('admin.course.index');
     });
 
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
