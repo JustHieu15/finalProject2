@@ -8,36 +8,7 @@
     <!-- Main Content -->
     <div class="p-4 sm:ml-auto mr-auto max-w-4xl">
         <!--Course Session -->
-        <div class="p-2">
-            <div class="flex w-full h-auto justify-between items-center rounded-lg p-4 bg-gray-700">
-                <h2 class="text-white text-base font-semibold">Choose course session</h2>
-                <div>
-                    <form class="max-w-xl mx-auto">
-                        <div class="flex flex-row text-white">
-                            <!-- Choose semester -->
-                            <label for="semester" class="sr-only">Choose semester</label>
-                            <select id="semester"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-80% p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected disabled>Choose semester</option>
-                                @foreach($semesters as $semester)
-                                    <option value="{{ $semester->id }}">{{ $semester->name }}</option>
-                                @endforeach
-                            </select>
-
-                            <!-- Choose year -->
-                            <label for="year" class="sr-only">Choose year</label>
-                            <select id="year"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected disabled>Choose year</option>
-                                @foreach($semesters as $semester)
-                                    <option value="{{ $semester->id }}">{{ $semester->year }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        @include('admin.blocks.search')
 
         <!-- Create Course button -->
         <div class="p-2">
@@ -77,26 +48,26 @@
                         <th scope="col" class="px-6 py-4 text-center">
                             subjects
                         </th>
-                        <th scope="col" class="pl-8 py-4">
-                            <a href="{{ route('admin.course.edit', [1]) }}" class="hover:underline hover:text-blue-500"></a>
+                        <th scope="col" class="px-8 py-4 text-center">
+                            Actions
                         </th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    @foreach ($courses as $course)
+                    @foreach ($courses as $index => $course)
                         <tr class="odd:bg-gray-700 even:bg-gray-400">
                             <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
                                 {{ $course->name }}
                             </th>
                             <td class="px-6 py-4 text-center uppercase">
-                                COURSE {{ $course->id }}
+                                COURSE {{ $index + 1}}
                             </td>
                             <td class="px-6 py-4 text-center">
                                 {{ $course->subject_name }}
                             </td>
                             <td class="px-6 py-4 text-center">
-                                <a href="{{ route('admin.course.edit', $course->id) }}" class="font-medium text-orange-500 hover:underline">Edit</a>
+                                <a href="{{ route('admin.course.edit', $course->slug) }}" class="font-medium text-orange-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                     @endforeach

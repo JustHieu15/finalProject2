@@ -51,56 +51,7 @@
                 </div>
             </div>
             <!-- Classes list -->
-            <div class="realative overflow-x-auto mb-4  rounded-lg bg-gray-700">
-                <table class="w-full text-sm text-left rtl:text-right text-white">
-                    <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-50 bg-gray-700 ">
-                        Your classes list
-                        <p class="mt-1 text-sm font-normal text-gray-300 ">The 'Your classes list' table summarizes all
-                            classes assigned to the teacher, displaying key information like class names, subjects, and
-                            timings. It helps teachers manage their teaching responsibilities efficiently.</p>
-                    </caption>
-                    <thead class="text-xs text-white uppercase bg-gray-500 ">
-                    <tr>
-                        <th scope="col" class="px-6 py-4">
-                            Class ID
-                        </th>
-                        <th scope="col" class="px-6 py-4 text-center">
-                            Name
-                        </th>
-                        <th scope="col" class="px-6 py-4 text-center">
-                            Students amount
-                        </th>
-                        <th scope="col" class="px-6 py-4 text-center">
-                            Semester
-                        </th>
-                        <th scope="col" class="pl-8 py-4">
-                            <a href="class.html" class="hover:underline hover:text-blue-500">See all</a>
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($classes as $class)
-                        <tr class="odd:bg-gray-700 even:bg-gray-400">
-                            <th scope="row" class="px-6 py-4 font-medium text-white  whitespace-nowrap ">
-                                CLASS {{ $class->id }}
-                            </th>
-                            <td class="px-6 py-4 text-center">
-                                {{ $class->name }}
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                {{ $class->number_student }}
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                {{ $class->semester_year }}
-                            </td>
-                            <td class="px-6 py-4 text-center">
-                                <a href="#" class="font-medium text-orange-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
+            @include('admin.blocks.class.list')
         </div>
     </div>
 @endsection
