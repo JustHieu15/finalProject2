@@ -14,9 +14,9 @@
 <aside id="logo-sidebar"
        class="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0"
        aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-700 ">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-700">
         <a href="{{ route('admin.dashboard') }}" class="flex items-center ps-2.5 mb-5">
-            <img src="{{ asset('assets/img/LogoEduZone.png') }}" class="h-14 me- sm:h-12 " alt="FPT EduZone Logo"/>
+            <img src="{{ asset('assets/img/LogoEduZone.png') }}" class="h-14 me-sm:h-12 " alt="FPT EduZone Logo"/>
         </a>
 
         <!-- This will be visible only in responsive mode -->
@@ -93,14 +93,31 @@
             </li>
 
             <li>
-                <a href="test.html" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+                <button type="button"
+                        class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-orange-500"
+                        aria-controls="dropdown-test" data-collapse-toggle="dropdown-test">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                          stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                        <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+                        <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Test</span>
-                </a>
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Test</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+                <ul id="dropdown-test" class="hidden py-2 space-y-2">
+                    <li>
+                        <a href="{{ route('admin.test.index') }}"
+                           class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Your test</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.question.index') }}"
+                           class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Question bank</a>
+                    </li>
+                </ul>
             </li>
 
             <li>

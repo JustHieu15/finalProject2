@@ -105,6 +105,33 @@ header .current-date {
     background: #f2f2f2a1;
 }
 
+#toolbar1 {
+    top: 20px;
+    right: 19%;
+    position: absolute;
+    background-color: gray;
+    transition: top 0.5s;
+}
+
+.toolbar-item {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-item svg {
+    fill: white;
+}
+
+.toolbar-item:hover {
+    background-color: #555;
+}
+
 
 
 

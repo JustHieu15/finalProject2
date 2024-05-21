@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     use HasFactory;
+
+    protected $table = 'answer';
+
+    protected $fillable = [
+        'content',
+        'is_correct',
+        'question_id',
+    ];
+
+    public $timestamps = false;
 }

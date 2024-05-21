@@ -13,7 +13,6 @@ class Semester extends Model
 
     protected $fillable = [
         'name',
-        'year',
     ];
 
     public $timestamps = false;

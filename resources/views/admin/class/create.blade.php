@@ -83,13 +83,11 @@
 
                         <div class="flex flex-row text-white">
                             <label for="semester" class="sr-only">Choose semester</label>
-                            <select id="semester" name="semester_id"
+                            <select id="semester" name="school_year_id"
                                     class="col-span-6 bg-gray-700 border text-white text-sm rounded-lg block w-full p-2.5">
                                 <option selected disabled>Choose semester</option>
-                                @foreach($semesters as $semester)
-                                    <option value="{{ $semester->id }}">
-                                        {{ $semester->name }} - {{ $semester->year }}
-                                    </option>
+                                @foreach($schoolYear as $semester)
+                                    <option value="{{ $semester->id }}">{{ $semester->name }}</option>
                                 @endforeach
                             </select>
                         </div>

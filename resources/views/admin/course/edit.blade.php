@@ -11,7 +11,7 @@
             <div class="flex flex-col w-full h-auto items-center rounded-lg p-4 mb-2 bg-gray-700">
                 <h1 class="text-white text-xl font-bold">Edit your course</h1>
 
-                <form action="{{ route('admin.course.update', $course->id) }}" class="flex flex-col w-full h-auto items-center"
+                <form action="{{ route('admin.course.update', $course->slug) }}" class="flex flex-col w-full h-auto items-center"
                       method="POST">
                     @method('PATCH')
                     @csrf
