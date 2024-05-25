@@ -15,42 +15,14 @@
        class="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0"
        aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-700">
-        <a href="{{ route('admin.dashboard') }}" class="flex items-center ps-2.5 mb-5">
+        <a href="{{ route('home') }}" class="flex items-center ps-2.5 mb-5">
             <img src="{{ asset('assets/img/LogoEduZone.png') }}" class="h-14 me-sm:h-12 " alt="FPT EduZone Logo"/>
         </a>
 
-        <!-- This will be visible only in responsive mode -->
-        <button type="button"
-                class="sm:hidden flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500"
-                aria-controls="dropdown-avatar" data-collapse-toggle="dropdown-avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
-                 stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/>
-                <circle cx="12" cy="10" r="3"/>
-                <circle cx="12" cy="12" r="10"/>
-            </svg>
-
-            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Teacher's name</span>
-            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                 viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="m1 1 4 4 4-4"/>
-            </svg>
-        </button>
-
-        <ul id="dropdown-avatar" class="hidden py-2 space-y-2">
-            <li>
-                <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Profile</a>
-            </li>
-
-            <li>
-                <a href="#" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Settings</a>
-            </li>
-        </ul>
-
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="{{ route('admin.dashboard') }}" class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
+                <a href="{{ route('admin.dashboard') }}"
+                   class="flex items-center p-2  text-white rounded-lg hover:bg-orange-500">
                     <svg class="w-5 h-5 text-white transition duration-75group-hover:text-white" aria-hidden="true"
                          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                         <path
@@ -87,7 +59,8 @@
                            class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Class</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.course.index') }}" class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
+                        <a href="{{ route('admin.course.index') }}"
+                           class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Course</a>
                     </li>
                 </ul>
             </li>
@@ -98,14 +71,14 @@
                         aria-controls="dropdown-test" data-collapse-toggle="dropdown-test">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                          stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-                        <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                        <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/>
                     </svg>
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Test</span>
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                          viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="m1 1 4 4 4-4" />
+                              d="m1 1 4 4 4-4"/>
                     </svg>
                 </button>
                 <ul id="dropdown-test" class="hidden py-2 space-y-2">
@@ -115,7 +88,8 @@
                     </li>
                     <li>
                         <a href="{{ route('admin.question.index') }}"
-                           class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Question bank</a>
+                           class="flex items-center w-full p-2 text-white rounded-lg hover:bg-orange-500">Question
+                            bank</a>
                     </li>
                 </ul>
             </li>
@@ -132,13 +106,19 @@
             </li>
 
             <li>
-                <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="flex items-center p-2 text-white rounded-lg hover:bg-orange-500">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
                          stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/>
                     </svg>
                     <span class="flex-1 ms-3 whitespace-nowrap">Sign Out</span>
                 </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </li>
         </ul>
     </div>
@@ -158,7 +138,9 @@
                 <circle cx="12" cy="10" r="3"/>
                 <circle cx="12" cy="12" r="10"/>
             </svg>
-            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Teacher's name</span>
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                {{ Auth::user()->name }}
+            </span>
             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="m1 1 4 4 4-4"/>

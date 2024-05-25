@@ -25,9 +25,21 @@ class Test extends Model
         return [
             'slug' => [
                 'source' => 'name',
-                'unique' => 'true',
+                'unique' => true,
+                'onUpdate' => true
             ]
         ];
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::updating(function ($test) {
+            $test_name = $test->getOriginal('name');
+
+            $test->slug = \Str::slug($test_name);
+        });
     }
 
     public $timestamps = false;

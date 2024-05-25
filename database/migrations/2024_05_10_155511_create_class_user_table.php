@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('class_user', function (Blueprint $table) {
             $table->foreignId('class_id')->constrained('class');
-            $table->foreignId('user_id')->constrained('user');
+            $table->foreignId('user_id')->constrained('users');
             $table->tinyInteger('status')->default(0);
 //            $table->timestamps();
         });
