@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Answer;
 use Illuminate\Http\Request;
 
 use App\Models\Classroom;
@@ -10,6 +11,7 @@ use App\Models\SchoolYear;
 use App\Models\Semester;
 use App\Models\Course;
 use App\Models\Test;
+use App\Models\Question;
 
 class TestController extends Controller
 {
@@ -85,6 +87,52 @@ class TestController extends Controller
         $test->time_limit = strtotime($test->time_limit) - strtotime('00:00:00');
         $test->time_limit = $test->time_limit / 60;
 
-        return view('admin.question.create', compact('test', 'course'));
+        $questions = Question::where('test_id', $test->id)->get();
+        $answers = Answer::join('question', 'answer.question_id', '=', 'question.id')
+            ->select('answer.*', 'question.title')
+            ->get();
+
+        return view('admin.question.create', compact('test', 'course', 'questions', 'answers'));
+    }
+
+    public function edit(Request $request, $slug)
+    {
+        $request->session()->put('test_slug', $slug);
+
+        $test = Test::where('slug', $slug)->first();
+        $courses = Course::all();
+
+        $testId = $test->id;
+
+        $test->time_limit = strtotime($test->time_limit) - strtotime('00:00:00');
+        $test->time_limit = $test->time_limit / 60;
+
+        return view('admin.test.edit', compact('test', 'courses', 'testId'));
+    }
+
+    public function update(Request $request)
+    {
+        $slug = $request->session()->get('test_slug');
+        $data = $request->all();
+
+        $timeLimit = $data['time_limit'];
+        $timeLimit = gmdate('i:s:00', $timeLimit);
+
+        $testUpdate = Test::where('slug', $slug)->first();
+
+        if ($testUpdate) {
+            $testUpdate->update([
+                'name' => $data['name'],
+                'description' => $data['description'],
+                'time_limit' => $timeLimit,
+                'course_id' => $data['course_id']
+            ]);
+
+            $testUpdate->save();
+
+            return redirect()->route('admin.test.index')->with('success', 'Test updated successfully');
+        } else {
+            return redirect()->route('admin.test.index')->with('error', 'Test failed to update');
+        }
     }
 }

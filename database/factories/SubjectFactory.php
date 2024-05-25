@@ -18,15 +18,17 @@ class SubjectFactory extends Factory
     {
         $nameAndSlug = [
             'Math' => 'math',
-            'Science' => 'science',
             'History' => 'history',
             'English' => 'english',
-            'Art' => 'art',
             'Music' => 'music',
-            'Physical Education' => 'physical-education',
-            'Computer Science' => 'computer-science',
-            'Health' => 'health',
+            'Physic' => 'physic',
             'Foreign Language' => 'foreign-language',
+            'Information Technology' => 'information-technology',
+            'Literature' => 'literature',
+            'Biology' => 'biology',
+            'Chemistry' => 'chemistry',
+            'Geography' => 'geography',
+            'Civic Education' => 'civic-education',
         ];
 
         $name = $this->faker->unique()->randomElement(array_keys($nameAndSlug));

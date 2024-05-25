@@ -23,6 +23,11 @@ php artisan key:generate
 ### Create an empty database for our application
 Create a database in your local machine and update the database credentials in .env file
 
+### Add Laravel ui
+```bash
+composer require laravel/ui
+```
+
 ### Migrate the database
 ```bash
 php artisan migrate

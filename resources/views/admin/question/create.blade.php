@@ -109,7 +109,68 @@
                                 </div>
                             </div>
 
-                            <div id="question-form"></div>
+                            <div id="question-form">
+                                @if ($questions->count() > 0)
+                                    @foreach ($questions as $key => $question)
+                                        <div class="w-full h-auto py-5 bg-gray-700 border-t question-container">
+                                            <h2 class="text-white text-lg font-semibold">
+                                                Question {{ $key + 1 }} <span
+                                                    class="remove-question cursor-pointer text-red-500">Remove</span>
+                                            </h2>
+                                            <div class="grid gap-6 mt-5 md:grid-cols-2">
+                                                <div class="col-span-6">
+                                                    <label for="question"
+                                                           class="block mb-2 text-white text-base font-semibold">
+                                                        Add question
+                                                    </label>
+                                                    <textarea id="question" disabled
+                                                              class="bg-gray-700 border text-white text-sm rounded-lg outline-none block w-full p-2.5"
+                                                              placeholder="Question goes here">{{ $question->title }}</textarea>
+                                                </div>
+                                                @foreach ($answers as $answerKey => $answer)
+                                                    @if ($answer->question_id === $question->id)
+                                                        <div id="options-answer-${questionNumber}"
+                                                             class="col-span-6 options-answer">
+                                                            <div class="mb-6 answer-container">
+                                                                <div class="flex items-center mb-3 gap-3">
+                                                                    <label
+                                                                        for="choice_{{ $key + 1 }}_{{ $answerKey + 1 }}"
+                                                                        class="block text-white text-base font-semibold">
+                                                                        Answer {{ $answerKey + 1 }} <span
+                                                                            class="text-red-500">*</span>
+                                                                    </label>
+                                                                    <span
+                                                                        class="remove-answer block cursor-pointer text-red-500">Remove</span>
+                                                                </div>
+                                                                <input type="text"
+                                                                       id="choice_{{ $key + 1 }}_{{ $answerKey + 1 }}"
+                                                                       disabled
+                                                                       value="{{ $answer->content }}"
+                                                                       class="bg-gray-700 border text-white text-sm rounded-lg outline-none block w-full p-2.5"
+                                                                       placeholder="Ex: Paris"/>
+                                                                <label
+                                                                    class="text-white text-sm font-semibold mt-2 block">
+                                                                    <input type="radio" disabled
+                                                                           value="{{ $answerKey }}"
+                                                                           class="mr-2" {{ $answer->is_correct == 1 ? 'checked' : '' }}>
+                                                                    Correct answer
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+
+                                                <div class="col-span-6">
+                                                    <button type="button"
+                                                            class="add-answer text-white bg-transparent border border-gray-500 hover:bg-red-500 font-medium rounded-lg text-lg px-12 py-1.5 mb-2">
+                                                        Add Answer
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
 
                             <div class="flex space-x-4 justify-end w-full mt-3">
                                 <button
@@ -196,6 +257,7 @@
                 "border-t",
                 "question-container",
             );
+
             question.innerHTML = /*html*/ `
                     <h2 class="text-white text-lg font-semibold">
                         Question ${questionNumber} <span class="remove-question cursor-pointer text-red-500">Remove</span>

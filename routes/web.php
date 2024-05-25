@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 // use controllers Admin
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
@@ -25,8 +26,11 @@ use App\Http\Controllers\Client\TestController as ClientTestController;
 |
 */
 
+// Authentication Routes
+Auth::routes();
+
 // Admin Routes
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::prefix('class')->group(function () {
         Route::get('/create', [AdminClassController::class, 'create'])->name('admin.class.create');
         Route::post('/store', [AdminClassController::class, 'store'])->name('admin.class.store');

@@ -4,6 +4,10 @@
     Result
 @endsection
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('assets/client/css/studenttest.css') }}">
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-12">

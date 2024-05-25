@@ -16,10 +16,17 @@ class RoleFactory extends Factory
      */
     public function definition(): array
     {
-        $roles = ['admin', 'teacher', 'student'];
-        $role = $this->faker->unique()->randomElement($roles);
+        $roles = [
+            '1' => 'Admin',
+            '2' => 'Teacher',
+            '3' => 'Student',
+        ];
+
+        $id = $this->faker->unique()->randomElement(array_keys($roles));
+        $role = $roles[$id];
 
         return [
+            'id' => $id,
             'name' => $role,
         ];
     }
